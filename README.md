@@ -19,3 +19,5 @@ Les directives nous fournissent un moyen standard pour résoudre les problèmes 
 - v-bind
 - v-on
 - v-model
+
+<strong>v-show</strong> peut sembler très similaire à la directive  v-if  ; pourtant, les deux ne sont pas interchangeables.  v-show  est généralement utilisée dans le but de contrôler la visibilité d'un élément faisant l'objet d'une permutation (toggle, en anglais) fréquente. La principale différence entre les deux directives est que  v-show  permute la visibilité de l'élément HTML grâce au CSS, alors que v-if supprime complètement l'élément du DOM.
