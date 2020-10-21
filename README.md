@@ -59,11 +59,3 @@ Lorsque on souhaite écouter certains événements sur un élément, Vue nous fa
 <div id="app">
     <button v-on:click="alert('Bonjour')">Cliquez ici !</button>
 </div>```
-
-Attention : 
-<i>La directive  <b>v-on</b>  est couramment utilisée via son abréviation «  @  ». Au lieu d'écrire  v-on:click="alert('Bonjour')", on écrit généralement plutôt   @click="alert('Bonjour')".</i>
-
-
-
-
-
