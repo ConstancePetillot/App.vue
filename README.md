@@ -46,9 +46,10 @@ Vous serez très souvent tenté d'utiliser une propriété  data  pour définir 
         }
     })
 </script>
+```
 
 
-
+<i>La directive  v-bind  est couramment utilisée via son abréviation «   :  ». En d'autres termes, au lieu d'écrire  v-bind:href="item.url", on écrit généralement plutôt  :href="item.url".</i>
 
 
 
