@@ -21,3 +21,39 @@ Les directives nous fournissent un moyen standard pour résoudre les problèmes 
 - v-model
 
 <strong>v-show</strong> peut sembler très similaire à la directive  v-if  ; pourtant, les deux ne sont pas interchangeables.  v-show  est généralement utilisée dans le but de contrôler la visibilité d'un élément faisant l'objet d'une permutation (toggle, en anglais) fréquente. La principale différence entre les deux directives est que  v-show  permute la visibilité de l'élément HTML grâce au CSS, alors que v-if supprime complètement l'élément du DOM.
+
+### Définissez des attributs HTML de façon dynamique
+
+Vous serez très souvent tenté d'utiliser une propriété  data  pour définir l'attribut d'un élément, plutôt que de le coder en dur. Il y a justement une directive faite exprès : la directive  <strong>v-bind</strong>. C'est le cas, par exemple, lorsque vous effectuez une requête pour récupérer des données auprès d'une API et que vous avez besoin de renvoyer des données en fonction de ce qui est retourné. 
+```vue.js
+<div id="app">
+    <ul>
+        <li v-for="item in apiResponse">
+            <a v-bind:href="item.url">{{ item.name }}</a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            apiResponse: [
+                { name: 'GitHub', url: '<https://www.github.com>' },
+                { name: 'Twitter', url: '<https://www.twitter.com>' },
+                { name: 'Netlify', url: '<https://www.netlify.com>' }
+            ]
+        }
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
