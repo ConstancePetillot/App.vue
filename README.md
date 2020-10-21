@@ -58,4 +58,41 @@ Lorsque on souhaite écouter certains événements sur un élément, Vue nous fa
 ```vue.js
 <div id="app">
     <button v-on:click="alert('Bonjour')">Cliquez ici !</button>
-</div>```
+</div>
+```
+
+
+<i>La directive  v-on  est couramment utilisée via son abréviation «  @  ». Au lieu d'écrire  v-on:click="alert('Bonjour')", on écrit généralement plutôt   @click="alert('Bonjour')".</i>
+
+Cependant, on aura souvent besoin d'appeler des fonctions bien plus complexes qu'une seule ligne de JavaScript. Et c'est là que les méthodes entrent en jeu. Les méthodes nous permettent de définir des fonctions auxquelles notre application Vue aura accès. Elles sont définies comme la propriété  data.
+```vue.js
+const app = new Vue({
+    el: '#app',
+    data: {
+        favoriteColor: 'bleu'
+    },
+    computed: {
+        label() {
+            return ':' + this.favoriteColor
+        }
+    },
+    methods: {
+        alertColor(colorLabel) {
+            alert('Ma couleur préférée ' + colorLabel)
+        },
+        changeColor() {
+            // Change la propriété data 
+            this.favoriteColor = 'turquoise'
+            // Appelle une méthode différente et passe une propriété calculée 
+            this.alertColor(this.label())
+        }
+    }
+})
+```
+
+
+### Mettre à jour les données dans des formulaires
+
+Lorsque l'on travaille avec des formulaires, on préfère mettre à jour le data store en conséquence. Cela nous permet d'effectuer des tâches telles que lancer une validation, des calculs, etc. Même s'il est possible de réaliser cela manuellement avec une directive  <b>v-on</b>  avec  <b>v-bind</b>, Vue fournit un moyen standard pour accomplir cette tâche avec <b>v-model</b>. Cela vous permet de définir la propriété  data  que l'on souhaite mettre à jour lorsque l'utilisateur interagit avec un formulaire.
+
+
