@@ -12,4 +12,10 @@ Les propriétés calculées (computed properties) nous permettent de définir un
 
 ### Les directives
 Les directives nous fournissent un moyen standard pour résoudre les problèmes courants. Elles sont particulièrement puissantes et écrites de manière sémantique, afin que le code soit facile à comprendre. Les directives ressemblent à des attributs HTML avec une différence principale : elles disposent toutes du préfixe  v-. Voici quelques directives courantes que vous rencontrerez dans les applications Vue : 
-![enter image description here] (https://openclassrooms.com/fr/courses/6390311-creez-une-application-web-avec-vue-js/6862376-utilisez-les-directives-vue-pour-gerer-des-problemes-courants#/id/r-6862415)
+
+- v-if, v-else-if, v-else
+- v-show
+- v-for
+- v-bind
+- v-on
+- v-model
