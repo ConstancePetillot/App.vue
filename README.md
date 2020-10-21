@@ -9,3 +9,7 @@ En cas de modification de l'une de ces valeurs, la liste s'adaptera en conséque
 ### Les propriétés calculées
 Les propriétés calculées (computed properties) nous permettent de définir une valeur réutilisable qui est mise à jour en fonction d'autres propriétés  data. Comme pour la propriété  data, nous commençons par ajouter une propriété  calculée  qui utilise un objet pour définir les propriétés que nous voulons. Cependant, contrairement à la propriété  data, chaque propriété calculée doit être une fonction retournant une valeur. En effet, elle effectue des calculs et retourne le résultat souhaité.
 ![enter image description here](https://zupimages.net/up/20/43/23v7.png)
+
+### Les directives
+Les directives nous fournissent un moyen standard pour résoudre les problèmes courants. Elles sont particulièrement puissantes et écrites de manière sémantique, afin que le code soit facile à comprendre. Les directives ressemblent à des attributs HTML avec une différence principale : elles disposent toutes du préfixe  v-. Voici quelques directives courantes que vous rencontrerez dans les applications Vue : 
+![enter image description here] (https://openclassrooms.com/fr/courses/6390311-creez-une-application-web-avec-vue-js/6862376-utilisez-les-directives-vue-pour-gerer-des-problemes-courants#/id/r-6862415)
