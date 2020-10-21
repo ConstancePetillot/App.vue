@@ -15,8 +15,18 @@
         dès le matin ou avec un goûter réconfortant. Mais attention, vous verrez
         qu'il est difficile de s'arrêter.
       </p>
+      <h2>Contactez nous</h2>
+      <p>Adresse : {{ adress }}</p>
+      <p>Téléphone : {{ phoneNumber }}</p>
+      <p>Email : {{ emailAdress }}</p>
+      <p>Horaires :</p>
+      <ul>
+        <li>L-V: 06:00 à 16:00</li>
+        <li>Samedi: 07:00 à 14:00</li>
+        <li>Dimanche: 07:00 à 12:00</li>
+      </ul>
       <footer class="footer">
-        <p>Copyright {{ restaurantName }} 2019</p>
+        <p>{{ copyright }}</p>
       </footer>
     </div>
 
@@ -25,7 +35,17 @@
       const app = new Vue({
         el: "#app",
         data: {
-          restaurantName: "La belle vue",
+          restaurantName: "Café avec Vue ",
+          phoneNumber: "01 88 88 88 88",
+          emailAdress: "hello@cafewithavue.bakery",
+          adress: "18 avenue du Beurre, Paris, France",
+        },
+        computed: {
+          copyright() {
+            const currentYear = new Date().getFullYear();
+
+            return `Copyright ${this.restaurantName} ${currentYear}`;
+          },
         },
       });
     </script>
