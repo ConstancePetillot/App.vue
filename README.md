@@ -1,6 +1,6 @@
 # App.vue
 
-## Practising Vue.Js by creating app about a coffeeshop named Café avec Vue
+## S'entrainer avec Vue.js en créant une application pour un coffee shop.
 
 ### Les données réactives
 En cas de modification de l'une de ces valeurs, la liste s'adaptera en conséquence. En d'autres termes, le data store a fait en sorte que tout soit réactif pour qu'on n'ait plus à intervenir !                                                     
