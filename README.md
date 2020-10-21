@@ -52,7 +52,18 @@ Vous serez très souvent tenté d'utiliser une propriété  data  pour définir 
 <i>La directive  v-bind  est couramment utilisée via son abréviation «   :  ». En d'autres termes, au lieu d'écrire  v-bind:href="item.url", on écrit généralement plutôt  :href="item.url".</i>
 
 
+### Ecoutez des événements
 
+Lorsque on souhaite écouter certains événements sur un élément, Vue nous facilite la tâche avec la directive   v-on.
+```vue.js
+<div id="app">
+    <button v-on:click="alert('Bonjour')">Cliquez ici !</button>
+</div>
+
+```
+
+```
+<i>La directive  <b>v-on</b>  est couramment utilisée via son abréviation «  @  ». Au lieu d'écrire  v-on:click="alert('Bonjour')", on écrit généralement plutôt   @click="alert('Bonjour')".</i>
 
 
 
