@@ -95,4 +95,4 @@ const app = new Vue({
 
 Lorsque l'on travaille avec des formulaires, on préfère mettre à jour le data store en conséquence. Cela nous permet d'effectuer des tâches telles que lancer une validation, des calculs, etc. Même s'il est possible de réaliser cela manuellement avec une directive  <b>v-on</b>  avec  <b>v-bind</b>, Vue fournit un moyen standard pour accomplir cette tâche avec <b>v-model</b>. Cela vous permet de définir la propriété  data  que l'on souhaite mettre à jour lorsque l'utilisateur interagit avec un formulaire.
 
-
+<img src="https://zupimages.net/up/20/43/9b6a.png" alt="byebye" width= 40% style="vertical-align:top; margin:4px"/>
