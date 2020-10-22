@@ -15,6 +15,38 @@
         dès le matin ou avec un goûter réconfortant. Mais attention, vous verrez
         qu'il est difficile de s'arrêter.
       </p>
+      <section class="menu">
+        <h2>Menu</h2>
+        <div v-for="item in simpleMenu" :key="item.name" class="menu-item">
+          <img
+            class="menu-item__image"
+            :src="item.image.source"
+            :alt="item.image.alt"
+          />
+          <div>
+            <h3>{{ item.name }}</h3>
+            <p v-if="item.inStock">En stock</p>
+            <p v-else>En rupture de stock</p>
+            <div>
+              <label for="add-item-quantity"
+                >Quantité : {{ item.quantity }}</label
+              >
+              <input
+                v-model.number="item.quantity"
+                id="add-item-quantity"
+                type="number"
+              />
+              <button @click="addToShoppingCart(item.quantity)">
+                Ajouter au panier d'achat
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="shopping-cart">
+        <h2>Panier d'achat: {{ shoppingCart }} articles</h2>
+      </aside>
       <h2>Contactez nous</h2>
       <p>Adresse : {{ adress }}</p>
       <p>Téléphone : {{ phoneNumber }}</p>
@@ -39,12 +71,47 @@
           phoneNumber: "01 88 88 88 88",
           emailAdress: "hello@cafewithavue.bakery",
           adress: "18 avenue du Beurre, Paris, France",
+          shoppingCart: 0,
+          simpleMenu: [
+            {
+              name: "Croissant",
+              image: {
+                source: "./Imgs/croissant.jpg",
+                alt: "Un croissant",
+              },
+              inStock: true,
+              quantity: 1,
+            },
+            {
+              name: "Baguette de pain",
+              image: {
+                source: "./Imgs/french-baguette.jpeg",
+                alt: "Quatre baguettes de pain",
+              },
+              inStock: true,
+              quantity: 1,
+            },
+            {
+              name: "Eclair",
+              image: {
+                source: "./Imgs/eclair.jpg",
+                alt: "Eclairs au chocolat",
+              },
+              inStock: false,
+              quantity: 1,
+            },
+          ],
         },
         computed: {
           copyright() {
             const currentYear = new Date().getFullYear();
 
             return `Copyright ${this.restaurantName} ${currentYear}`;
+          },
+        },
+        methods: {
+          addToShoppingCart(amount) {
+            this.shoppingCart += amount;
           },
         },
       });

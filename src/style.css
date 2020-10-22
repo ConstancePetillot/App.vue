@@ -34,3 +34,9 @@
 .menu-item__image {
   max-width: 300px;
 }
+
+.shopping-cart {
+  position: absolute;
+  right: 30px;
+  top: 0;
+}
